@@ -4,6 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 echo 'Python'
+                sh 'cat Jenkinsfile'
             }
         }
     }
