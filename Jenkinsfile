@@ -14,7 +14,7 @@ pipeline {
 //                     echo conf.packages.[0].toString()
                     println conf.getClass()
                     println st.getClass()
-                    println conf.packages
+                    println conf.packages.name
 //                     echo st.getClass()
                    
                 }
