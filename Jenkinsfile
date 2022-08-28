@@ -10,6 +10,7 @@ pipeline {
                     def conf = readYaml file: "1.3.0.yaml"
                     def st = conf.toString()
                     echo st
+                    echo $st.packages
 //                     echo conf.getClass()
 //                     echo st.getClass()
                    
