@@ -4,7 +4,7 @@ pipeline {
         stage('Update the yaml file') {
             steps {
                 script {
-                    sh 'echo ${params.Version}'                  
+//                     sh 'echo ${params.Version}'                  
                     def conf = readYaml file: "1.3.0.yaml"
                     def st = conf.toString()
                     echo st
@@ -17,16 +17,11 @@ pipeline {
                     if (conf.packages[23].name == 'tap') {
                         println conf.packages.versions[23]
                         println conf.packages[23].versions
+                        r = conf.packages[23].versions
+                        println r.matches("(.*)");
                     }
-//                     echo st.getClass()
-                   
                 }
             }
-                
-//                 sh 'echo mani@pass#10 | sudo -S /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
-//                 sh 'brew install yq'
-//                 sh 'yq to_entries 1.3.0.yaml'
-//             }
         }
     }
 }
