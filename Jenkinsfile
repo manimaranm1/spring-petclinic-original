@@ -40,6 +40,8 @@ pipeline {
                     writeYaml file: '1.3.0.yaml', data:conf
                     println "After"
                     println conf
+                    def conf2 = readYaml file: "1.3.0.yaml"
+                    println conf
                     
 //                     if (conf.packages[23].name == 'tap') {
 //                         println conf.packages.versions[23]
