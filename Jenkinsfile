@@ -37,7 +37,7 @@ pipeline {
                     conf.packages[23].versions[0] = conf.packages[23].versions[0].replaceFirst(r,new_minor_version)
                     println conf.packages[23].versions[0]
                     println conf
-                    writeYaml file: '1.3.0.yaml', data:conf
+                    writeYaml file: '1.3.0.yaml', data:conf, overwrite:true
                     println "After"
                     println conf
                     def conf2 = readYaml file: "1.3.0.yaml"
