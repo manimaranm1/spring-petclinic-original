@@ -19,9 +19,10 @@ pipeline {
                         println conf.packages[23].versions[0]
                         r = conf.packages[23].versions[0]
                         
-                        def pattern = ~ /[1.3.0\-build.(\d+)\"]*/
-                        def result = (r =~ /\d+/).findAll()
-                        println result
+                        def matcher = r =~ /^1.3.0\-build.(?<minor>\d.*)$/
+                        matcher.matches() 
+                        println matcher.group("minor")
+                        
                         
                     }
                 }
