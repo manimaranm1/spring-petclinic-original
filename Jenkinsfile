@@ -20,7 +20,7 @@ pipeline {
                         r = conf.packages[23].versions[0]
                         
                         def pattern = ~ /[1.3.0\-build.(\d+)\"]*/
-                        def result = (r =~ /1.3.0\-build.[\d+]*/).findAll()
+                        def result = (r =~ /\d+/).findAll()
                         println result
                         
                     }
