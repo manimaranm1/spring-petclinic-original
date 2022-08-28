@@ -43,7 +43,7 @@ pipeline {
                     def conf2 = readYaml file: "1.3.0.yaml"
                     println conf
                     sh 'git config --global user.name "manimaranm1"'
-                    
+                    sh 'git config --global user.name'
                     sh 'git status'
                     sh 'git add 1.3.0.yaml'
                     sh 'git commit -m "changes for 1.3.0-build.14"'
