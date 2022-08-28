@@ -24,6 +24,8 @@ pipeline {
                         minor_version = matcher.group("minor")
                         Integer current_minor_version = minor_version as Integer
                         println current_minor_version
+                        new_minor_version = "1.3.0-build." + (current_minor_version + 1)
+                        println new_minor_version
                         
                     }
                 }
