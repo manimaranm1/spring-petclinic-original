@@ -21,9 +21,9 @@ pipeline {
                         
                         def matcher = r =~ /^1.3.0\-build.(?<minor>\d.*)$/
                         matcher.matches() 
-                        
-                        def current-version = matcher.group("minor")
-                        println current-version
+                        minor-version = matcher.group("minor")
+                        Integer current-minor-version = minor-version as Integer
+                        println current-minor-version
                         
                     }
                 }
