@@ -14,6 +14,7 @@ pipeline {
 //                     echo conf.packages.[0].toString()
                     println conf.getClass()
                     println st.getClass()
+                    println conf
                     println conf.packages.name == 'tap'
 //                     echo st.getClass()
                    
