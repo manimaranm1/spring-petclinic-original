@@ -43,6 +43,7 @@ pipeline {
                     def conf2 = readYaml file: "1.3.0.yaml"
                     println conf
                     sh 'git status'
+                    sh 'git add 1.3.0.yaml'
 //                     if (conf.packages[23].name == 'tap') {
 //                         println conf.packages.versions[23]
 //                         println conf.packages[23].versions[0]
