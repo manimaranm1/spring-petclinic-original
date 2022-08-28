@@ -16,9 +16,9 @@ pipeline {
                     println st.getClass()
                     println conf
                     println conf.packages.name[23]
-                    if (conf.packages.name[23] == 'tap') {
+                    if (conf.packages[23].name == 'tap') {
                         println conf.packages.versions[23]
-                        println conf.packages[23]
+                        println conf.packages[23].versions
                     }
 //                     echo st.getClass()
                    
