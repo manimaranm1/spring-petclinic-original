@@ -1,11 +1,8 @@
 pipeline {
     agent any
     stages {
-        stage('build') {
+        stage('Update the yaml file') {
             steps {
-                echo 'Python'
-                sh 'cat Jenkinsfile'
-                sh 'uname'
                 script {
                     def conf = readYaml file: "1.3.0.yaml"
                     def st = conf.toString()
