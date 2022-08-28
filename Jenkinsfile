@@ -11,8 +11,8 @@ pipeline {
                     def st = conf.toString()
                     echo st
                     echo conf.packages.toString()
-                    echo conf.packages.cert-manager.toString()
-//                     echo conf.getClass()
+//                     echo conf.packages.[0].toString()
+                    echo conf.getClass()
 //                     echo st.getClass()
                    
                 }
