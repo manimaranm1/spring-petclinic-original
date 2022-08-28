@@ -13,6 +13,7 @@ pipeline {
                     echo conf.packages.toString()
 //                     echo conf.packages.[0].toString()
                     println conf.getClass()
+                    println st.getClass()
 //                     echo st.getClass()
                    
                 }
