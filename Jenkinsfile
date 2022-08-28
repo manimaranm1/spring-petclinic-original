@@ -18,7 +18,11 @@ pipeline {
                         println conf.packages.versions[23]
                         println conf.packages[23].versions[0]
                         r = conf.packages[23].versions[0]
-                        println r.matches("(.*)");
+                        
+                        def pattern = ~ /[1.3.0\-build.(\d+)\"]*/
+                        def result = (r =~ /1.3.0\-build.[\d+]*/).findAll()
+                        println result
+                        
                     }
                 }
             }
