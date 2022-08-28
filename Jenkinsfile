@@ -4,7 +4,7 @@ pipeline {
         stage('Update the yaml file') {
             steps {
                 script {
-                    sh 'echo ${parms}'                  
+                    sh 'echo ${params.Version}'                  
                     def conf = readYaml file: "1.3.0.yaml"
                     def st = conf.toString()
                     echo st
