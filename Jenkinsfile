@@ -8,7 +8,7 @@ pipeline {
                 sh 'uname'
                 script {
                     def conf = readYaml file: "1.3.0.yaml"
-                    echo conf.packages.name
+                    assert conf.packages.name == "cert-manager"
                 }
             }
                 
