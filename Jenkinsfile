@@ -36,6 +36,10 @@ pipeline {
                     def conf = readYaml file: "1.3.0.yaml"
                     conf.packages[23].versions[0] = conf.packages[23].versions[0].replaceFirst(r,new_minor_version)
                     println conf.packages[23].versions[0]
+                    println conf
+                    writeYaml file: 'datas.yaml', data:conf
+                    println "After"
+                    println conf
                     
 //                     if (conf.packages[23].name == 'tap') {
 //                         println conf.packages.versions[23]
