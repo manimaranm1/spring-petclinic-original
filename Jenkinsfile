@@ -16,6 +16,9 @@ pipeline {
                     println st.getClass()
                     println conf
                     println conf.packages.name[23]
+                    if (conf.packages.name[23] == 'tap') {
+                        println conf.packages.name[23].version
+                    }
 //                     echo st.getClass()
                    
                 }
