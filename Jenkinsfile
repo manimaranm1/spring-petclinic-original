@@ -16,8 +16,8 @@ pipeline {
                     println conf.packages.name[23]
                     if (conf.packages[23].name == 'tap') {
                         println conf.packages.versions[23]
-                        println conf.packages[23].versions
-                        r = conf.packages[23].versions
+                        println conf.packages[23].versions[0]
+                        r = conf.packages[23].versions[0]
                         println r.matches("(.*)");
                     }
                 }
