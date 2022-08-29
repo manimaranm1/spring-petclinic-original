@@ -50,7 +50,7 @@ pipeline {
                     sh 'git status'
                     sh 'git add 1.3.0.yaml'
                     sh 'git commit -m "changes for 1.3.0-build.14"'
-                    sh 'git remote add origin git@github.com:manimaranm1/spring-petclinic-original.git'
+//                     sh 'git remote add origin git@github.com:manimaranm1/spring-petclinic-original.git'
                     sh 'git remote -v'
                     sh 'git push origin main'
 //                     sh 'git push https://manimaranm1:mani@pass#10@github.com/spring-petclinic-original.git'
