@@ -37,7 +37,9 @@ pipeline {
                     conf.packages[23].versions[0] = conf.packages[23].versions[0].replaceFirst(r,new_minor_version)
                     println conf.packages[23].versions[0]
                     println conf
-//                     sh 'git clone https://github.com/manimaranm1/spring-petclinic-original.git'
+                    sh 'git clone https://github.com/manimaranm1/spring-petclinic-original.git'
+                    sh 'git branch test-1'
+                    sh 'git checkout test-1'
                     writeYaml file: '1.3.0.yaml', data:conf, overwrite:true
                     println "After"
                     println conf
@@ -49,7 +51,7 @@ pipeline {
                     sh 'git add 1.3.0.yaml'
                     sh 'git commit -m "changes for 1.3.0-build.14"'
 //                     sh 'git push https://manimaranm1:mani@pass#10@github.com/spring-petclinic-original.git'
-                    sh 'git push https://github.com/manimaranm1/spring-petclinic-original.git HEAD:main'
+                    sh 'git push https://github.com/manimaranm1/spring-petclinic-original.git test-1:main'
 //                     if (conf.packages[23].name == 'tap') {
 //                         println conf.packages.versions[23]
 //                         println conf.packages[23].versions[0]
