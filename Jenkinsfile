@@ -48,7 +48,8 @@ pipeline {
                     sh 'git status'
                     sh 'git add 1.3.0.yaml'
                     sh 'git commit -m "changes for 1.3.0-build.14"'
-                    sh 'git push https://manimaranm1:mani@pass#10@github.com/spring-petclinic-original.git'
+//                     sh 'git push https://manimaranm1:mani@pass#10@github.com/spring-petclinic-original.git'
+                    sh 'git push https://github.com/manimaranm1/spring-petclinic-original.git'
 //                     if (conf.packages[23].name == 'tap') {
 //                         println conf.packages.versions[23]
 //                         println conf.packages[23].versions[0]
