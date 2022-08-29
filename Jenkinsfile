@@ -37,7 +37,7 @@ pipeline {
                     conf.packages[23].versions[0] = conf.packages[23].versions[0].replaceFirst(r,new_minor_version)
                     println conf.packages[23].versions[0]
                     println conf
-                    sh 'git clone https://github.com/manimaranm1/spring-petclinic-original.git'
+//                     sh 'git clone https://github.com/manimaranm1/spring-petclinic-original.git'
                     sh 'git branch test-1'
                     sh 'git checkout test-1'
                     writeYaml file: '1.3.0.yaml', data:conf, overwrite:true
