@@ -38,7 +38,6 @@ pipeline {
                     println conf.packages[23].versions[0]
                     println conf
 //                     sh 'git clone https://github.com/manimaranm1/spring-petclinic-original.git'
-//                     sh 'git branch test-1'
                     sh 'git checkout main'
                     sh 'git pull'
                     writeYaml file: '1.3.0.yaml', data:conf, overwrite:true
@@ -55,22 +54,6 @@ pipeline {
                     sh 'git remote -v'
 //                     sh 'ssh -T git@github.com'
                     sh 'git push origin --all'
-//                     sh 'git push https://manimaranm1:mani@pass#10@github.com/spring-petclinic-original.git'
-//                     sh 'git push https://github.com/manimaranm1/spring-petclinic-original.git test-1:main'
-//                     if (conf.packages[23].name == 'tap') {
-//                         println conf.packages.versions[23]
-//                         println conf.packages[23].versions[0]
-//                         r = conf.packages[23].versions[0]
-                        
-//                         def matcher = r =~ /^1.3.0\-build.(?<minor>\d.*)$/
-//                         matcher.matches() 
-//                         minor_version = matcher.group("minor")
-//                         Integer current_minor_version = minor_version as Integer
-//                         println current_minor_version
-//                         new_minor_version = "1.3.0-build." + (current_minor_version + 1)
-//                         println new_minor_version
-                        
-//                     }
                 }
             }
         }
