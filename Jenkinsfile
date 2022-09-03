@@ -39,7 +39,8 @@ pipeline {
                     println conf
 //                     sh 'git clone https://github.com/manimaranm1/spring-petclinic-original.git'
 //                     sh 'git branch test-1'
-//                     sh 'git checkout test-1'
+                    sh 'git checkout master'
+                    sh 'git pull'
                     writeYaml file: '1.3.0.yaml', data:conf, overwrite:true
                     println "After"
                     println conf
