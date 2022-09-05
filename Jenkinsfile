@@ -57,5 +57,12 @@ pipeline {
 //                 }
 //             }
 //         }
+        stage('Run CI ') {
+            steps {
+                script {
+                        
+                }
+            }
+        }
     }
 }
