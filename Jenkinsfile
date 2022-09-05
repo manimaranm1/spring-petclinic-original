@@ -4,7 +4,7 @@ pipeline {
         stage('Read the yaml file tap version') {
             steps {
                 script {                
-                    def conf = readYaml file: "https://gitlab.eng.vmware.com/tap/tap-packages/-/blob/master/repos/1.3.0.yaml"
+                    def conf = readYaml file: "repos/1.3.0.yaml"
                     def st = conf.toString()
                     echo st
                     echo conf.packages.toString()
