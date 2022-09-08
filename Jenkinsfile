@@ -11,7 +11,8 @@ pipeline {
 //                 echo "Hello ${params.cert_manager}"
                 script {    
                     println "${params.component_version}"
-                    println ${params.component_version}.getClass()
+                    def version = "${params.component_version}"
+                    println version.getClass()
 //                     println "${params.cert_manager}"
 //                     def conf = readYaml file: "repos/1.3.0.yaml"
 //                     def st = conf.toString()
