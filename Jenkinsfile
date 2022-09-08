@@ -1,12 +1,8 @@
 pipeline {
     agent any
-    properties([
-      parameters([
-        string(name: 'submodule', defaultValue: ''),
-        string(name: 'submodule_branch', defaultValue: ''),
-        string(name: 'commit_sha', defaultValue: ''),
-      ])
-    ])
+    parameters {
+        string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+    }
     stages {
         stage('Read the yaml file tap version') {
             steps {
@@ -64,12 +60,6 @@ pipeline {
 //                 }
 //             }
 //         }
-        stage('Run CI ') {
-            steps {
-                script {
-                        
-                }
-            }
-        }
+
     }
 }
