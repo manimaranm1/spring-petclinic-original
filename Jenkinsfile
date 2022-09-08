@@ -1,14 +1,17 @@
 pipeline {
     agent any
     parameters {
-        string(name: 'certmanager', defaultValue: '', description: 'Enter')
+        text(name: 'certmanager', defaultValue: '', description: 'Enter')
+        text(name: 'cert-manager', defaultValue: '', description: 'Enter')
     }
     stages {
         stage('Read the yaml file tap version') {
             steps {
                 echo "Hello ${params.certmanager}"
+                echo "Hello ${params.cert-manager}"
                 script {    
                     println "${params.certmanager}"
+                    println "${params.cert-manager}"
 //                     def conf = readYaml file: "repos/1.3.0.yaml"
 //                     def st = conf.toString()
 //                     echo st
