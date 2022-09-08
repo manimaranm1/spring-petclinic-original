@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    parameters {
+        choice(name: 'Build Version', choices: ['1.3.0', '1.2.0'], description: 'Pick something')
+    }
     stages {
         stage('Read the yaml file tap version') {
             steps {
