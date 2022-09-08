@@ -8,7 +8,7 @@ pipeline {
             steps {
                 script {    
                     echo "Hello ${params.cert-manager}"
-                    def conf = readYaml file: "repos/1.3.0.yaml"
+//                     def conf = readYaml file: "repos/1.3.0.yaml"
 //                     def st = conf.toString()
 //                     echo st
 //                     echo conf.packages.toString()
