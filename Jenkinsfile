@@ -9,7 +9,8 @@ pipeline {
             steps {
 //                 echo "Hello ${params.component_version}"
 //                 echo "Hello ${params.cert_manager}"
-                script {  
+                script {
+                    sh 'docker login dev.registry.tanzu.vmware.com -u svc.dap-delivery@vmware.com -p VMware12345!'
                     sh 'go run scripts/create-package-repo.go 1.3.0 1.3.0 testing'
 //                     println "${params.component_version}"
 //                     def version = "${params.component_version}"
