@@ -13,6 +13,7 @@ pipeline {
 //                 echo "Hello ${params.component_version}"
 //                 echo "Hello ${params.cert_manager}"
                 script {
+                    sh 'sudo usermod -a -G docker jenkins'
                     sh 'docker login dev.registry.tanzu.vmware.com -u svc.dap-delivery@vmware.com -p VMware12345!'
                     sh 'go run scripts/create-package-repo.go 1.3.0 1.3.0 testing'
 //                     println "${params.component_version}"
