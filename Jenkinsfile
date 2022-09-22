@@ -1,18 +1,19 @@
 pipeline {
     agent any
-    parameters {
-        text(name: 'component_version', defaultValue: '', description: 'Component_name:version')
+//     parameters {
+//         text(name: 'component_version', defaultValue: '', description: 'Component_name:version')
 //         text(name: 'cert_manager', defaultValue: '', description: 'Enter')
-    }
+//     }
     stages {
         stage('Read the yaml file tap version') {
             steps {
-                echo "Hello ${params.component_version}"
+//                 echo "Hello ${params.component_version}"
 //                 echo "Hello ${params.cert_manager}"
-                script {    
-                    println "${params.component_version}"
-                    def version = "${params.component_version}"
-                    println version.getClass()
+                script {  
+                    sh 'go run scripts/create-package-repo.go 1.3.0 1.3.0 testing'
+//                     println "${params.component_version}"
+//                     def version = "${params.component_version}"
+//                     println version.getClass()
 //                     println "${params.cert_manager}"
 //                     def conf = readYaml file: "repos/1.3.0.yaml"
 //                     def st = conf.toString()
