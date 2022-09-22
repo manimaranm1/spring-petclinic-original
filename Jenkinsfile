@@ -1,5 +1,8 @@
 pipeline {
-    agent any
+//     agent any
+    agent {
+        docker { image 'node:16.13.1-alpine' }
+    }
 //     parameters {
 //         text(name: 'component_version', defaultValue: '', description: 'Component_name:version')
 //         text(name: 'cert_manager', defaultValue: '', description: 'Enter')
